@@ -1,0 +1,273 @@
+/* ==========================================================================
+   SUSHICODEE PORTFOLIO — Animation Keyframes & Utility Classes
+   Companion to style.css — contains ONLY @keyframes and animation classes
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. KEYFRAMES
+   -------------------------------------------------------------------------- */
+
+/* Hero background gradient cycling */
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Floating oscillation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+/* Floating with offset timing for variety */
+@keyframes float-delayed {
+  0%, 100% { transform: translateY(0); }
+  33%      { transform: translateY(-10px); }
+  66%      { transform: translateY(5px); }
+}
+
+/* Pulsing glow box-shadow */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(0, 212, 255, 0.2); }
+  50%      { box-shadow: 0 0 40px rgba(0, 212, 255, 0.4); }
+}
+
+/* Full orbit rotation */
+@keyframes orbit {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Reverse orbit */
+@keyframes orbit-reverse {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+/* Typing cursor blink */
+@keyframes typing-cursor {
+  0%, 100% { opacity: 0; }
+  50%      { opacity: 1; }
+}
+
+/* Glitch effect — layer 1 */
+@keyframes glitch {
+  0%   { clip-path: inset(40% 0 61% 0); transform: translate(-2px, 2px); }
+  20%  { clip-path: inset(92% 0 1% 0);  transform: translate(1px, -1px); }
+  40%  { clip-path: inset(43% 0 1% 0);  transform: translate(-1px, 3px); }
+  60%  { clip-path: inset(25% 0 58% 0); transform: translate(3px, 1px); }
+  80%  { clip-path: inset(54% 0 7% 0);  transform: translate(-3px, -2px); }
+  100% { clip-path: inset(58% 0 43% 0); transform: translate(2px, -3px); }
+}
+
+/* Glitch effect — layer 2 (offset) */
+@keyframes glitch-2 {
+  0%   { clip-path: inset(65% 0 13% 0); transform: translate(3px, -1px); }
+  20%  { clip-path: inset(12% 0 76% 0); transform: translate(-2px, 2px); }
+  40%  { clip-path: inset(78% 0 5% 0);  transform: translate(2px, -3px); }
+  60%  { clip-path: inset(38% 0 47% 0); transform: translate(-3px, 1px); }
+  80%  { clip-path: inset(3% 0 83% 0);  transform: translate(1px, 3px); }
+  100% { clip-path: inset(51% 0 28% 0); transform: translate(-1px, -2px); }
+}
+
+/* Bounce down indicator */
+@keyframes bounce-down {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(10px); }
+}
+
+/* Fade in from below */
+@keyframes fade-in-up {
+  0%   { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Fade in from above */
+@keyframes fade-in-down {
+  0%   { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Fade in from left */
+@keyframes fade-in-left {
+  0%   { opacity: 0; transform: translateX(-30px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Fade in from right */
+@keyframes fade-in-right {
+  0%   { opacity: 0; transform: translateX(30px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Scale in */
+@keyframes scale-in {
+  0%   { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Slide up from offscreen */
+@keyframes slide-up {
+  0%   { transform: translateY(100%); }
+  100% { transform: translateY(0); }
+}
+
+/* Stat bar fill */
+@keyframes counter-grow {
+  0%   { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
+}
+
+/* Shimmer / loading shine */
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Complex particle floating path */
+@keyframes particle-float {
+  0%   { transform: translate(0, 0); }
+  25%  { transform: translate(10px, -15px); }
+  50%  { transform: translate(-5px, -25px); }
+  75%  { transform: translate(15px, -10px); }
+  100% { transform: translate(0, 0); }
+}
+
+/* Slow continuous rotation */
+@keyframes rotate-slow {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Glow pulse for ikigai center text */
+@keyframes glow-pulse {
+  0%, 100% { text-shadow: 0 0 10px rgba(0, 212, 255, 0.3), 0 0 20px rgba(0, 212, 255, 0.1); }
+  50%      { text-shadow: 0 0 20px rgba(0, 212, 255, 0.6), 0 0 40px rgba(0, 212, 255, 0.3), 0 0 60px rgba(124, 58, 237, 0.2); }
+}
+
+
+/* --------------------------------------------------------------------------
+   2. ANIMATION UTILITY CLASSES
+   -------------------------------------------------------------------------- */
+
+.animate-float         { animation: float 6s ease-in-out infinite; }
+.animate-float-delayed { animation: float-delayed 7s ease-in-out infinite; }
+.animate-pulse         { animation: pulse-glow 2s ease-in-out infinite; }
+.animate-orbit         { animation: orbit 20s linear infinite; }
+.animate-orbit-reverse { animation: orbit-reverse 25s linear infinite; }
+.animate-bounce        { animation: bounce-down 2s ease-in-out infinite; }
+.animate-rotate        { animation: rotate-slow 30s linear infinite; }
+.animate-glow          { animation: glow-pulse 3s ease-in-out infinite; }
+
+
+/* --------------------------------------------------------------------------
+   3. GLITCH EFFECT
+   -------------------------------------------------------------------------- */
+
+.glitch {
+  position: relative;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.glitch::before {
+  color: var(--accent-primary, #00d4ff);
+  animation: glitch 3s infinite linear alternate-reverse;
+  clip-path: inset(40% 0 61% 0);
+  text-shadow: -2px 0 var(--accent-secondary, #7c3aed);
+}
+
+.glitch::after {
+  color: var(--accent-secondary, #7c3aed);
+  animation: glitch-2 2.5s infinite linear alternate-reverse;
+  clip-path: inset(65% 0 13% 0);
+  text-shadow: 2px 0 var(--accent-primary, #00d4ff);
+}
+
+
+/* --------------------------------------------------------------------------
+   4. SCROLL-TRIGGERED VISIBILITY CLASSES
+   -------------------------------------------------------------------------- */
+
+[data-animate] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-animate].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Direction variants */
+[data-animate="fade-down"] {
+  transform: translateY(-30px);
+}
+
+[data-animate="fade-left"] {
+  transform: translateX(-30px);
+}
+
+[data-animate="fade-right"] {
+  transform: translateX(30px);
+}
+
+[data-animate="scale-in"] {
+  transform: scale(0.8);
+}
+
+/* Float elements get continuous animation once visible */
+[data-animate="float"].is-visible {
+  animation: float 6s ease-in-out infinite;
+}
+
+
+/* --------------------------------------------------------------------------
+   5. STAGGER DELAYS
+   -------------------------------------------------------------------------- */
+
+[data-stagger] > *:nth-child(1)  { transition-delay: 0ms; }
+[data-stagger] > *:nth-child(2)  { transition-delay: 100ms; }
+[data-stagger] > *:nth-child(3)  { transition-delay: 200ms; }
+[data-stagger] > *:nth-child(4)  { transition-delay: 300ms; }
+[data-stagger] > *:nth-child(5)  { transition-delay: 400ms; }
+[data-stagger] > *:nth-child(6)  { transition-delay: 500ms; }
+[data-stagger] > *:nth-child(7)  { transition-delay: 600ms; }
+[data-stagger] > *:nth-child(8)  { transition-delay: 700ms; }
+[data-stagger] > *:nth-child(9)  { transition-delay: 800ms; }
+[data-stagger] > *:nth-child(10) { transition-delay: 900ms; }
+[data-stagger] > *:nth-child(11) { transition-delay: 1000ms; }
+[data-stagger] > *:nth-child(12) { transition-delay: 1100ms; }
+
+
+/* --------------------------------------------------------------------------
+   6. REDUCED MOTION OVERRIDES
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  [data-animate] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

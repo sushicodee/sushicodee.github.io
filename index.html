@@ -1,30 +1,375 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta name="description" content="sushicodee — Sushant Shrestha. Senior Full-Stack Developer & AI Automation Builder. 10+ years building production systems, EDI integrations, and intelligent workflows.">
+    <meta name="theme-color" content="#0a0a0f" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="color-scheme" content="dark light">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="sushicodee | Senior Full-Stack Developer & AI Automation Builder">
+    <meta property="og:description" content="Senior Full-Stack Developer at PortPro. Building intelligent systems, EDI integrations, and AI-powered automation workflows.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sushicodee.github.io">
+    <meta property="og:image" content="assets/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="sushicodee | Full-Stack Developer & AI Builder">
+    <meta name="twitter:description" content="Senior Full-Stack Developer, EDI Specialist, AI Automation Builder">
+
+    <title>sushicodee | Senior Full-Stack Developer & AI Automation Builder</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
-    <div class = 'bio-info'>
-        <h1>Sushant Shrestha</h1>
-        <img src="./profile.jpg" alt="">
-        <ul>
-            <li>
-                Title: Web Developer
-            </li>
-            <li>
-                Technical Skills: React js , Angular js, Javascript , Scss/css
-            </li>
-            <li>
-                age: 25
-            </li>
 
-            <li>
-                Education: B.E
-            </li>
-        </ul>
-    </div>
+    <!-- ========== NAVIGATION ========== -->
+    <header class="nav" id="nav" role="banner">
+        <nav class="nav__inner" aria-label="Primary navigation">
+            <a href="#hero" class="nav__logo" aria-label="sushicodee — back to top">sushicodee</a>
+
+            <ul class="nav__links" id="nav-links" role="menubar">
+                <li role="none"><a href="#about" class="nav__link" role="menuitem">About</a></li>
+                <li role="none"><a href="#journey" class="nav__link" role="menuitem">Journey</a></li>
+                <li role="none"><a href="#expertise" class="nav__link" role="menuitem">Expertise</a></li>
+                <li role="none"><a href="#highlights" class="nav__link" role="menuitem">Highlights</a></li>
+                <li role="none"><a href="#philosophy" class="nav__link" role="menuitem">Philosophy</a></li>
+                <li role="none"><a href="#connect" class="nav__link" role="menuitem">Connect</a></li>
+            </ul>
+
+            <div class="nav__actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark and light mode" type="button">
+                    <span class="theme-toggle__icon" aria-hidden="true"></span>
+                </button>
+
+                <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links" type="button">
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ========== HERO SECTION ========== -->
+        <section id="hero" class="hero" data-animate="fade-up">
+            <canvas id="hero-particles" aria-hidden="true"></canvas>
+
+            <div class="hero__bg-elements" data-parallax="0.3" aria-hidden="true">
+                <div class="hero__orb hero__orb--1"></div>
+                <div class="hero__orb hero__orb--2"></div>
+                <div class="hero__orb hero__orb--3"></div>
+            </div>
+
+            <div class="hero__content">
+                <h1 class="hero__title glitch" data-text="sushicodee">sushicodee</h1>
+
+                <p class="hero__subtitle">
+                    <span class="typing-text"></span><span class="typing-cursor" aria-hidden="true">|</span>
+                </p>
+
+                <p class="hero__tagline">Full-Stack Developer &bull; EDI Specialist &bull; AI Automation Builder</p>
+
+                <div class="hero__cta">
+                    <a href="#journey" class="btn btn--primary" aria-label="Explore my career journey">Explore My Journey</a>
+                    <a href="#connect" class="btn btn--secondary" aria-label="Get in touch with me">Get In Touch</a>
+                </div>
+            </div>
+
+            <div class="hero__scroll-indicator" aria-hidden="true">
+                <span class="scroll-chevron">&#8964;</span>
+            </div>
+        </section>
+
+        <!-- ========== ABOUT SECTION ========== -->
+        <section id="about" class="section about" data-animate="fade-up">
+            <div class="container">
+                <h2 class="section__title">About<span class="section__title-accent"></span></h2>
+
+                <div class="about__grid">
+                    <div class="about__text" data-animate="fade-right">
+                        <p>I'm Sushant Shrestha &mdash; a senior full-stack developer and AI automation builder based in Nepal. For over 10 years, I've been building production systems that power real businesses &mdash; from drayage logistics at PortPro to AI/blockchain solutions at Customindz. I specialize in React, Node.js, EDI integrations, and building intelligent automation workflows that make complex operations effortless. I believe in finding your Ikigai and writing code that matters.</p>
+                    </div>
+
+                    <div class="about__avatar" data-animate="fade-left">
+                        <div class="avatar-ring">
+                            <div class="avatar-ring__orbit avatar-ring__orbit--1" aria-hidden="true"></div>
+                            <div class="avatar-ring__orbit avatar-ring__orbit--2" aria-hidden="true"></div>
+                            <div class="avatar-ring__orbit avatar-ring__orbit--3" aria-hidden="true"></div>
+                            <div class="avatar-ring__initials">SS</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about__stats" data-animate="fade-up" data-stagger>
+                    <div class="stat" data-animate="fade-up">
+                        <span class="stat__number"><span class="counter" data-target="10">0</span>+</span>
+                        <span class="stat__label">Years Experience</span>
+                    </div>
+                    <div class="stat" data-animate="fade-up">
+                        <span class="stat__number"><span class="counter" data-target="5">0</span>+</span>
+                        <span class="stat__label">Companies</span>
+                    </div>
+                    <div class="stat" data-animate="fade-up">
+                        <span class="stat__number"><span class="counter" data-target="40">0</span>+</span>
+                        <span class="stat__label">Projects Shipped</span>
+                    </div>
+                    <div class="stat" data-animate="fade-up">
+                        <span class="stat__number"><span class="counter" data-target="10">0</span>+</span>
+                        <span class="stat__label">AI Automations</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== TIMELINE / JOURNEY SECTION ========== -->
+        <section id="journey" class="section journey" data-animate="fade-up">
+            <div class="container">
+                <h2 class="section__title">The Journey<span class="section__title-accent"></span></h2>
+
+                <div class="timeline" role="list" aria-label="Career timeline">
+                    <button class="timeline__arrow timeline__arrow--left" aria-label="Scroll timeline left" type="button">&#8249;</button>
+
+                    <div class="timeline__track" id="timeline-track">
+                        <div class="timeline__line" aria-hidden="true"></div>
+
+                        <article class="timeline-node" data-animate="scale-in" role="listitem">
+                            <span class="timeline-node__year">2018–2019</span>
+                            <h3 class="timeline-node__company">Fusemachines</h3>
+                            <p class="timeline-node__role">Tech Intern &rarr; Engineering Trainee</p>
+                            <div class="timeline-node__details">
+                                <p>Started my engineering journey. 9 months of hands-on training in software development.</p>
+                            </div>
+                        </article>
+
+                        <article class="timeline-node" data-animate="scale-in" role="listitem">
+                            <span class="timeline-node__year">2019</span>
+                            <h3 class="timeline-node__company">Leapfrog Technology</h3>
+                            <p class="timeline-node__role">Software Intern</p>
+                            <div class="timeline-node__details">
+                                <p>Learned industry best practices at one of Nepal's top tech companies.</p>
+                            </div>
+                        </article>
+
+                        <article class="timeline-node" data-animate="scale-in" role="listitem">
+                            <span class="timeline-node__year">2020</span>
+                            <h3 class="timeline-node__company">Customindz</h3>
+                            <p class="timeline-node__role">Full-Stack Developer</p>
+                            <div class="timeline-node__details">
+                                <p>Built AI, Blockchain &amp; Enterprise solutions in Hong Kong. First professional full-stack role.</p>
+                            </div>
+                        </article>
+
+                        <article class="timeline-node" data-animate="scale-in" role="listitem">
+                            <span class="timeline-node__year">2020–2021</span>
+                            <h3 class="timeline-node__company">Freelance</h3>
+                            <p class="timeline-node__role">Full-Stack Developer</p>
+                            <div class="timeline-node__details">
+                                <p>Built custom web applications for clients. Sharpened React, Node.js &amp; MongoDB skills independently.</p>
+                            </div>
+                        </article>
+
+                        <article class="timeline-node" data-animate="scale-in" role="listitem">
+                            <span class="timeline-node__year">2021–Present</span>
+                            <h3 class="timeline-node__company">PortPro</h3>
+                            <p class="timeline-node__role">Senior Full-Stack Developer &amp; EDI Specialist</p>
+                            <div class="timeline-node__details">
+                                <p>Building the drayage industry's leading TMS. Full-stack React/Node.js development, EDI integrations, AI automation workflows, and scaling production systems.</p>
+                            </div>
+                        </article>
+
+                        <article class="timeline-node" data-animate="scale-in" role="listitem">
+                            <span class="timeline-node__year">Ongoing</span>
+                            <h3 class="timeline-node__company">sushicodee</h3>
+                            <p class="timeline-node__role">AI Automation Builder</p>
+                            <div class="timeline-node__details">
+                                <p>Building AI agents, Claude Code skills, automation workflows, and open-source tools. Turning ideas into intelligent systems.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <button class="timeline__arrow timeline__arrow--right" aria-label="Scroll timeline right" type="button">&#8250;</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== EXPERTISE SECTION ========== -->
+        <section id="expertise" class="section expertise" data-animate="fade-up">
+            <div class="container">
+                <h2 class="section__title">Expertise<span class="section__title-accent"></span></h2>
+
+                <div class="expertise__categories" data-stagger>
+
+                    <div class="expertise__category" data-animate="fade-up">
+                        <h3 class="expertise__category-title">Frontend</h3>
+                        <div class="expertise__bubbles">
+                            <div class="skill-bubble skill-bubble--lg" data-animate="float">React.js</div>
+                            <div class="skill-bubble skill-bubble--lg" data-animate="float">JavaScript</div>
+                            <div class="skill-bubble skill-bubble--md" data-animate="float">HTML5</div>
+                            <div class="skill-bubble skill-bubble--md" data-animate="float">CSS3</div>
+                            <div class="skill-bubble skill-bubble--md" data-animate="float">Angular</div>
+                            <div class="skill-bubble skill-bubble--sm" data-animate="float">Redux</div>
+                            <div class="skill-bubble skill-bubble--sm" data-animate="float">TypeScript</div>
+                        </div>
+                    </div>
+
+                    <div class="expertise__category" data-animate="fade-up">
+                        <h3 class="expertise__category-title">Backend &amp; Data</h3>
+                        <div class="expertise__bubbles">
+                            <div class="skill-bubble skill-bubble--lg" data-animate="float">Node.js</div>
+                            <div class="skill-bubble skill-bubble--md" data-animate="float">Hapi.js</div>
+                            <div class="skill-bubble skill-bubble--md" data-animate="float">Express</div>
+                            <div class="skill-bubble skill-bubble--md" data-animate="float">MongoDB</div>
+                            <div class="skill-bubble skill-bubble--md" data-animate="float">Sequelize</div>
+                            <div class="skill-bubble skill-bubble--sm" data-animate="float">Mongoose</div>
+                            <div class="skill-bubble skill-bubble--sm" data-animate="float">PostgreSQL</div>
+                        </div>
+                    </div>
+
+                    <div class="expertise__category" data-animate="fade-up">
+                        <h3 class="expertise__category-title">AI &amp; Automation</h3>
+                        <div class="expertise__bubbles">
+                            <div class="skill-bubble skill-bubble--lg" data-animate="float">Claude Code</div>
+                            <div class="skill-bubble skill-bubble--md" data-animate="float">AI Agents</div>
+                            <div class="skill-bubble skill-bubble--md" data-animate="float">EDI / X12</div>
+                            <div class="skill-bubble skill-bubble--md" data-animate="float">Workflow Automation</div>
+                            <div class="skill-bubble skill-bubble--sm" data-animate="float">LLMs</div>
+                            <div class="skill-bubble skill-bubble--sm" data-animate="float">MCP Servers</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== HIGHLIGHTS SECTION ========== -->
+        <section id="highlights" class="section highlights" data-animate="fade-up">
+            <div class="container">
+                <h2 class="section__title">Highlights<span class="section__title-accent"></span></h2>
+
+                <div class="bento-grid" data-stagger>
+
+                    <article class="glass-card glass-card--lg" data-tilt data-animate="fade-up">
+                        <span class="glass-card__icon" aria-hidden="true">&#9889;</span>
+                        <h3 class="glass-card__title">PortPro</h3>
+                        <p class="glass-card__desc">Senior Full-Stack Developer building the drayage industry's leading TMS. 4+ years scaling production systems.</p>
+                    </article>
+
+                    <article class="glass-card glass-card--md" data-tilt data-animate="fade-up">
+                        <span class="glass-card__icon" aria-hidden="true">&#129302;</span>
+                        <h3 class="glass-card__title">AI Agent Builder</h3>
+                        <p class="glass-card__desc">Building Claude Code skills, multi-agent swarms, and intelligent automation workflows</p>
+                    </article>
+
+                    <article class="glass-card glass-card--md" data-tilt data-animate="fade-up">
+                        <span class="glass-card__icon" aria-hidden="true">&#128268;</span>
+                        <h3 class="glass-card__title">EDI Specialist</h3>
+                        <p class="glass-card__desc">Expert in X12 EDI transactions, Orderful integrations, and supply chain data flows</p>
+                    </article>
+
+                    <article class="glass-card glass-card--sm" data-tilt data-animate="fade-up">
+                        <span class="glass-card__icon" aria-hidden="true">&#127758;</span>
+                        <h3 class="glass-card__title">Nepal to Global</h3>
+                    </article>
+
+                    <article class="glass-card glass-card--sm" data-tilt data-animate="fade-up">
+                        <span class="glass-card__icon" aria-hidden="true">&#128187;</span>
+                        <h3 class="glass-card__title">MERN Stack</h3>
+                    </article>
+
+                    <article class="glass-card glass-card--sm" data-tilt data-animate="fade-up">
+                        <span class="glass-card__icon" aria-hidden="true">&#128640;</span>
+                        <h3 class="glass-card__title">Open Source</h3>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== PHILOSOPHY SECTION ========== -->
+        <section id="philosophy" class="section philosophy" data-animate="fade-up">
+            <div class="container">
+                <h2 class="section__title">Philosophy<span class="section__title-accent"></span></h2>
+
+                <div class="ikigai" data-animate="scale-in" aria-label="Ikigai Venn diagram representing the intersection of passion, mission, profession, and vocation">
+                    <div class="ikigai__circle ikigai__circle--top">
+                        <span class="ikigai__label ikigai__label--top">Passion</span>
+                    </div>
+                    <div class="ikigai__circle ikigai__circle--right">
+                        <span class="ikigai__label ikigai__label--right">Mission</span>
+                    </div>
+                    <div class="ikigai__circle ikigai__circle--bottom">
+                        <span class="ikigai__label ikigai__label--bottom">Profession</span>
+                    </div>
+                    <div class="ikigai__circle ikigai__circle--left">
+                        <span class="ikigai__label ikigai__label--left">Vocation</span>
+                    </div>
+                    <div class="ikigai__center">
+                        <span class="ikigai__center-text">Ikigai</span>
+                    </div>
+                </div>
+
+                <blockquote class="philosophy__quote" data-animate="fade-up">
+                    <p>&ldquo;I believe everyone has an Ikigai &mdash; a reason for being. Mine is building intelligent systems that solve real problems. Code is how I express it.&rdquo;</p>
+                    <cite>&mdash; sushicodee</cite>
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- ========== CONNECT / CONTACT SECTION ========== -->
+        <section id="connect" class="section connect" data-animate="fade-up">
+            <div class="container">
+                <canvas id="connect-constellation" aria-hidden="true"></canvas>
+
+                <h2 class="section__title">Let's Connect<span class="section__title-accent"></span></h2>
+
+                <p class="connect__intro">Always open to conversations about full-stack development, AI automation, and building cool things.</p>
+
+                <div class="connect__links" data-stagger>
+                    <a href="https://linkedin.com/in/sushantshrestha-347792a4" target="_blank" rel="noopener noreferrer" class="connect__link" data-animate="fade-up" aria-label="LinkedIn profile">
+                        <span class="connect__link-icon" aria-hidden="true">in</span>
+                        <span class="connect__link-label">LinkedIn</span>
+                    </a>
+
+                    <a href="https://github.com/sushicodee" target="_blank" rel="noopener noreferrer" class="connect__link" data-animate="fade-up" aria-label="GitHub profile">
+                        <span class="connect__link-icon" aria-hidden="true">&#9776;</span>
+                        <span class="connect__link-label">GitHub</span>
+                    </a>
+
+                    <a href="mailto:ssushant.sss@gmail.com" class="connect__link" data-animate="fade-up" aria-label="Send email to ssushant.sss@gmail.com">
+                        <span class="connect__link-icon" aria-hidden="true">&#9993;</span>
+                        <span class="connect__link-label">Email</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; 2025 sushicodee. Built with code and curiosity.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
 </body>
 </html>
