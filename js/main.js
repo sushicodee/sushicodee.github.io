@@ -181,7 +181,7 @@
     if (!el) return;
 
     var phrases = [
-      'Senior Full-Stack Developer',
+      'Tech Lead at PortPro',
       'AI Automation Builder',
       'EDI Integration Specialist',
       'MERN Stack Engineer',
