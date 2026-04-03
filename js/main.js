@@ -108,20 +108,45 @@
     }, { passive: true });
 
     // Hamburger
+    var backdrop = document.getElementById('nav-backdrop');
+
+    function closeNav() {
+      navLinks.classList.remove('nav__links--open');
+      hamburger.classList.remove('hamburger--active');
+      hamburger.setAttribute('aria-expanded', 'false');
+      if (backdrop) backdrop.classList.remove('nav__backdrop--visible');
+      document.body.style.overflow = '';
+    }
+
+    function openNav() {
+      navLinks.classList.add('nav__links--open');
+      hamburger.classList.add('hamburger--active');
+      hamburger.setAttribute('aria-expanded', 'true');
+      if (backdrop) backdrop.classList.add('nav__backdrop--visible');
+      document.body.style.overflow = 'hidden';
+    }
+
     if (hamburger && navLinks) {
       hamburger.addEventListener('click', function () {
-        var isOpen = navLinks.classList.toggle('nav__links--open');
-        hamburger.classList.toggle('hamburger--active', isOpen);
-        hamburger.setAttribute('aria-expanded', String(isOpen));
+        var isOpen = navLinks.classList.contains('nav__links--open');
+        if (isOpen) {
+          closeNav();
+        } else {
+          openNav();
+        }
       });
 
       links.forEach(function (link) {
         link.addEventListener('click', function () {
-          navLinks.classList.remove('nav__links--open');
-          hamburger.classList.remove('hamburger--active');
-          hamburger.setAttribute('aria-expanded', 'false');
+          closeNav();
         });
       });
+
+      if (backdrop) {
+        backdrop.addEventListener('click', function () {
+          closeNav();
+        });
+      }
     }
 
     // Smooth scroll with offset

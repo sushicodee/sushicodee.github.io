@@ -1501,6 +1501,11 @@ body.light-theme .nav--scrolled {
     display: flex;
   }
 
+  .nav__actions {
+    z-index: 1002;
+    position: relative;
+  }
+
   .nav__links {
     position: fixed;
     top: 0;
@@ -1509,7 +1514,7 @@ body.light-theme .nav--scrolled {
     max-width: 360px;
     height: 100vh;
     height: 100dvh;
-    background: var(--bg-secondary);
+    background: rgba(17, 17, 17, 0.97);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     flex-direction: column;
@@ -1520,8 +1525,12 @@ body.light-theme .nav--scrolled {
     transition: right var(--transition-slow);
     border-left: 1px solid var(--glass-border);
     box-shadow: -8px 0 32px rgba(0, 0, 0, 0.5);
-    z-index: 999;
+    z-index: 1001;
     overflow-y: auto;
+  }
+
+  body.light-theme .nav__links {
+    background: rgba(240, 240, 240, 0.97);
   }
 
   .nav__links--open {
@@ -1530,13 +1539,29 @@ body.light-theme .nav--scrolled {
 
   .nav__link {
     font-size: var(--text-xl);
-    padding: var(--space-2) 0;
+    padding: var(--space-3) 0;
     width: 100%;
     border-bottom: 1px solid var(--glass-border);
   }
 
   .nav__link:last-child {
     border-bottom: none;
+  }
+
+  /* Backdrop overlay when nav is open */
+  .nav__backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+
+  .nav__backdrop--visible {
+    display: block;
   }
 }
 
