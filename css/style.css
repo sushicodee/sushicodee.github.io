@@ -687,6 +687,7 @@ body.light-theme .nav--scrolled {
 .about__avatar {
   width: 200px;
   height: 200px;
+  aspect-ratio: 1;
   border-radius: 50%;
   background: var(--accent-gradient);
   padding: 3px;
@@ -695,6 +696,8 @@ body.light-theme .nav--scrolled {
   justify-content: center;
   position: relative;
   margin: 0 auto;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
 .about__avatar-inner {
@@ -716,12 +719,26 @@ body.light-theme .nav--scrolled {
   -webkit-text-fill-color: transparent;
 }
 
-.avatar-ring__photo {
+.avatar-ring {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.avatar-ring__photo {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
   object-fit: cover;
+  object-position: center top;
   display: block;
+}
+
+.avatar-ring__orbit {
+  display: none;
 }
 
 .about__avatar::before,
@@ -1484,37 +1501,42 @@ body.light-theme .nav--scrolled {
     display: flex;
   }
 
-  .nav__menu {
+  .nav__links {
     position: fixed;
     top: 0;
     right: -100%;
     width: 80%;
     max-width: 360px;
     height: 100vh;
+    height: 100dvh;
     background: var(--bg-secondary);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     padding: 100px var(--space-8) var(--space-8);
     gap: var(--space-6);
-    transition: right var(--transition-base);
+    transition: right var(--transition-slow);
     border-left: 1px solid var(--glass-border);
-    box-shadow: -8px 0 32px rgba(0, 0, 0, 0.3);
+    box-shadow: -8px 0 32px rgba(0, 0, 0, 0.5);
     z-index: 999;
+    overflow-y: auto;
   }
 
-  .nav__menu--open {
+  .nav__links--open {
     right: 0;
   }
 
-  .nav__links {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-6);
+  .nav__link {
+    font-size: var(--text-xl);
+    padding: var(--space-2) 0;
+    width: 100%;
+    border-bottom: 1px solid var(--glass-border);
   }
 
-  .nav__link {
-    font-size: var(--text-lg);
+  .nav__link:last-child {
+    border-bottom: none;
   }
 }
 
@@ -1554,6 +1576,7 @@ body.light-theme .nav--scrolled {
   .about__avatar {
     width: 160px;
     height: 160px;
+    aspect-ratio: 1;
   }
 
   .about__avatar::before {
